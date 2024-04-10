@@ -12,3 +12,80 @@ updates:
     groups:
       all-actions:
         patterns: [ "*" ]
+
+  # Maintain dependencies for TypeScript and JavaScript
+  # Covers
+  # - yarn
+  # - package
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain dependencies for TypeScript and JavaScript
+  # Covers
+  # - package
+  - package-ecosystem: npm
+    directory: /app
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain dependencies for TypeScript and JavaScript
+  # Covers
+  # - package
+  - package-ecosystem: npm
+    directory: /scripts/gpublish
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain dependencies for gradle
+  - package-ecosystem: gradle
+    directory: /app/android
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  - package-ecosystem: gradle
+    directory: /app/android/app
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain dependencies for Ruby
+  - package-ecosystem: bundler
+    directory: /app
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  # Maintain docker image references in k8s manifests
+  - package-ecosystem: docker
+    directory: /devops/charts/loki-logstack/templates
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
+
+  - package-ecosystem: docker
+    directory: /devops/charts/loki-logstack
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Canada/Pacific"
